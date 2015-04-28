@@ -1,4 +1,4 @@
-name := "kumquatt_mqttd_benchmark"
+name := "mqttd_benchmark"
 
 
 version := "1.0"

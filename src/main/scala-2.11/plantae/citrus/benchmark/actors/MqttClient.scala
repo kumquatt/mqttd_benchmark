@@ -1,10 +1,10 @@
-package plantae.citrus.actors
+package plantae.citrus.benchmark.actors
 
 import java.util.concurrent.TimeUnit
 
 import akka.actor.{Cancellable, Actor, ActorLogging}
 import org.eclipse.paho.client.mqttv3._
-import plantae.citrus.SystemContainer
+import plantae.citrus.benchmark.SystemContainer
 import scala.concurrent.ExecutionContext
 import scala.concurrent.duration.FiniteDuration
 import scala.util.Random

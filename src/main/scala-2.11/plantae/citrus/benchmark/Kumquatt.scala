@@ -1,7 +1,8 @@
-package plantae.citrus
+package plantae.citrus.benchmark
 
-import akka.actor.{Props, ActorSystem}
-import plantae.citrus.actors.{Connect, MqttClientActor}
+import akka.actor.{ActorSystem, Props}
+import plantae.citrus.benchmark.actors.{Connect, MqttClientActor}
+import plantae.citrus.mqttclient.KumquattClient
 
 
 object SystemContainer {
@@ -10,9 +11,11 @@ object SystemContainer {
 object Kumquatt {
 
   def main(args: Array[String]): Unit ={
+
     val usage = """
     Usage: <server address> <port> <count> <time_wait>
     """
+    KumquattClient.printAll
 
     if (args.length != 4) println(usage)
     else {
