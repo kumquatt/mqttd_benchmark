@@ -2,8 +2,6 @@ package plantae.citrus.benchmark
 
 import akka.actor.{ActorSystem, Props}
 import plantae.citrus.benchmark.actors.{Connect, MqttClientActor}
-import plantae.citrus.mqttclient.KumquattClient
-
 
 object SystemContainer {
   val system = ActorSystem()
@@ -15,7 +13,6 @@ object Kumquatt {
     val usage = """
     Usage: <server address> <port> <count> <time_wait>
     """
-    KumquattClient.printAll
 
     if (args.length != 4) println(usage)
     else {
